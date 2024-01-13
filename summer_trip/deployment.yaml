@@ -5,10 +5,10 @@ metadata:
     app: summer-trip
   name: summer-trip-deployment
 spec:
-  replicas:
+  replicas: 3
   selector:
-    matchLables:
-	app: summer-trip
+    matchLabels:
+      app: summer-trip
   template:
     metadata:
       labels:
@@ -18,5 +18,6 @@ spec:
       - name: regcred
       containers:
       - name: summer-trip
-	image: gcr.io/loony-argocd/summer-trip-v1
-	imagePullPolicy: Always			 	 	
+        image: gcr.io/loony-argocd/summer-trip-v1
+        imagePullPolicy: Always
+		 	 	
