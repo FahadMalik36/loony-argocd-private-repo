@@ -8,16 +8,16 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: summer-trip
+      app: summer_trip
   template:
     metadata:
       labels:
-        app: summer-trip
+        app: summer_trip
     spec:
       imagePullSecrets:
       - name: regcred
       containers:
-      - name: summer-trip
+      - name: summer_trip
         image: gcr.io/loony-argocd/summer-trip-v1
         imagePullPolicy: Always
 		 	 	
